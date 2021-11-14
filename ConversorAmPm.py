@@ -47,6 +47,14 @@ def ajuda():
     print("# AM (Ante Meridiem) significa \"antes do meio-dia\"")
     print(" PM (Post Meridiem) significa \"após o meio-dia\"")
     print(espaco)
+def formtInvalid():
+    print(espaco)
+    print(ops)
+    print("# Formatação de hora invalida")
+    print("# Formatação -> \"HH:MM\"")
+    print("# H = Horas")
+    print("# M = Minutos")
+    print(espaco)
 #começo da app
 bemVindo()
 #repete o codigo no final
@@ -76,10 +84,7 @@ while True:
                     print("# minutos invalidos...")
                     print(espaco)
                 elif doisPontos != ":":
-                    print(espaco)
-                    print(ops)
-                    print("# Formatação de hora invalida...")
-                    print(espaco)
+                    formtInvalid()
                 else:
                     minutosCorrigido = horas[2:5]
                     #verifica o formato de novo e printa o resultado
@@ -107,20 +112,14 @@ while True:
                     else:
                         print(espaco)
                         print(ops)
-                        print("# Formato de invalido")
+                        print("# Formato invalido")
                         print("# Formato -> AM ou PM")
                         print(espaco)
             except ValueError:
-                print(espaco)
-                print(ops)
-                print("# Formatação de hora invalida")
-                print("# Formatação -> \"HH:MM\"")
-                print("# H = Horas")
-                print("# M = Minutos")
-                print(espaco)
+                formtInvalid()
         else:
             print(espaco)
             print(ops)
-            print("# Formato de invalido")
+            print("# Formato invalido")
             print("# Formato -> AM ou PM")
             print(espaco)
