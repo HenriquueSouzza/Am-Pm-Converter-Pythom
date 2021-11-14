@@ -63,6 +63,7 @@ while True:
             try:
                 hora = int(horas[0:2])
                 minutos = int(horas[3:5])
+                doisPontos = horas[2]
                 #verifica hora e minutos
                 if hora > 23:
                     print(espaco)
@@ -73,6 +74,11 @@ while True:
                     print(espaco)
                     print(ops)
                     print("# minutos invalidos...")
+                    print(espaco)
+                elif doisPontos != ":":
+                    print(espaco)
+                    print(ops)
+                    print("# Formatação de hora invalida...")
                     print(espaco)
                 else:
                     minutosCorrigido = horas[2:5]
