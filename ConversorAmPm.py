@@ -1,5 +1,7 @@
 #Desenvoldido por Henrique Souza para fins acadêmicos.
 #Instagram: @henriquuesouzza.
+#=============================#
+#initCode
 #constantes e Funções não mexer !
 ops = "## Oops! Algo deu errado..."
 formatosAjuda = ["ajuda","AJUDA","Ajuda","/ajuda","help","/help","HELP","Help","/h","/H"]
@@ -112,3 +114,4 @@ while True:
             print("# Formato invalido")
             print("# Formato -> AM ou PM")
             print(espaco)
+#endCode
