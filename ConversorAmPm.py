@@ -88,33 +88,22 @@ while True:
                 else:
                     minutosCorrigido = horas[2:5]
                     #verifica o formato de novo e printa o resultado
-                    if formato in formatosPm:
-                        if contaAmPm(hora) == "err":
-                            print(espaco)
-                            print(ops)
-                            print("# A hora já está em Pm")
-                            print(espaco)
-                        else:
-                            print(espaco)
-                            print("## A hora foi transformada de Am para Pm!")
-                            print("# Resultado: "+contaAmPm(hora)+minutosCorrigido)
-                    elif formato in formatosAm:
-                        if contaPmAm(hora) == "err":
-                            print(espaco)
-                            print(ops)
-                            print("# A hora já está em Am")
-                            print(espaco)
-                        else:
-                            print(espaco)
-                            print("## A hora foi transformada de Pm para Am!")
-                            print("# Resultado: "+contaPmAm(hora)+minutosCorrigido)
-                            print(espaco)
-                    else:
+                    if formato in formatosPm and contaAmPm(hora) == "err" or formato in formatosAm and contaPmAm(hora) == "err":
                         print(espaco)
                         print(ops)
-                        print("# Formato invalido")
-                        print("# Formato -> AM ou PM")
+                        print("# A hora já está no formato desejado!")
                         print(espaco)
+                    elif formato in formatosPm:
+                        print(espaco)
+                        print("## A hora foi transformada de Am para Pm!")
+                        print("# Resultado: "+contaAmPm(hora)+minutosCorrigido)
+                    elif formato in formatosAm:
+                        print(espaco)
+                        print("## A hora foi transformada de Pm para Am!")
+                        print("# Resultado: "+contaPmAm(hora)+minutosCorrigido)
+                        print(espaco)
+                    else:
+                        formtInvalid()
             except ValueError:
                 formtInvalid()
         else:
