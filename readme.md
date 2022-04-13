@@ -1,10 +1,5 @@
-# Conversor de horas Am e Pm.
-## Sobre o conversor:
-Ele consiste em alterar horários de maneira fácil e rápida de Am para Pm ou vice versa.
-## Como funciona:
-Para alterar basta informar as horas e minutos e para qual formato deseja alterar se é pm ou am.
-# Translation:
-# Converter for hours am and pm.
+# Converter for hours am and pm. 
+*This was one of my first college projects.*
 ## About the converter:
 It consists of changing times easily and quickly from AM to PM or vice versa.
 ## How it works:
